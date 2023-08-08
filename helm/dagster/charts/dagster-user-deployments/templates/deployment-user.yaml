@@ -10,7 +10,7 @@ metadata:
     deployment: {{ $deployment.name }}
   annotations: {{ $deployment.annotations | toYaml | nindent 4 }}
 spec:
-  replicas: {{ $deployment.replicas }}
+  replicas: 1
   strategy: {{ $deployment.strategy | default dict | toYaml | nindent 4 }}
   selector:
     matchLabels:
